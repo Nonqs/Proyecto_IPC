@@ -29,14 +29,14 @@
          <children>
             <VBox alignment="CENTER" prefHeight="184.0" prefWidth="342.0">
                <children>
-                  <Label text="User" />
-                  <TextField maxWidth="220.0" promptText="User" />
+                  <Label text="Usuario" />
+                  <TextField maxWidth="220.0" promptText="Userio" />
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" prefHeight="151.0" prefWidth="342.0" GridPane.rowIndex="1">
                <children>
-                  <Label text="Password" />
-                  <PasswordField maxWidth="220.0" promptText="Password" />
+                  <Label text="Contraseña" />
+                  <PasswordField maxWidth="220.0" promptText="Contraseña" />
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" prefHeight="443.0" prefWidth="342.0" GridPane.rowIndex="2">
