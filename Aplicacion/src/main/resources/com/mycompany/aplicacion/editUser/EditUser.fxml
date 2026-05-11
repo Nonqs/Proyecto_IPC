@@ -15,23 +15,25 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox spacing="16.0" style="-fx-background-color: #E0ff4F;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.aplicacion.editUser.EditUserController">
+<VBox prefHeight="515.0" prefWidth="390.0" spacing="16.0" style="-fx-background-color: #E0ff4F;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.aplicacion.editUser.EditUserController">
    <children>
       <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Editar usuario" textFill="#00272b">
          <font>
             <Font size="22.0" />
          </font></Label>
-      <VBox prefHeight="334.0" prefWidth="342.0" style="-fx-background-color: #00272B; -fx-background-radius: 15;">
+      <VBox prefHeight="373.0" prefWidth="342.0" style="-fx-background-color: #00272B; -fx-background-radius: 15;">
          <children>
-            <GridPane prefHeight="333.0" prefWidth="342.0" VBox.vgrow="ALWAYS">
+            <GridPane prefHeight="377.0" prefWidth="342.0" VBox.vgrow="ALWAYS">
               <columnConstraints>
                 <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" />
               </columnConstraints>
               <rowConstraints>
+                  <RowConstraints maxHeight="62.00000610351563" minHeight="10.0" prefHeight="62.00000610351563" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="43.59998168945313" minHeight="10.0" prefHeight="34.79999389648438" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
@@ -43,17 +45,17 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
                      <children>
-                        <Text fill="#e0ff4f" text="Usuario" />
-                        <TextField promptText="Usuario" />
+                        <Text fill="#e0ff4f" text="Nickname" />
+                        <TextField promptText="Nickname" />
                      </children>
                   </VBox>
-                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
                      <children>
                         <Text fill="#e0ff4f" text="Contraseña" />
                         <PasswordField promptText="Contraseña" />
                      </children>
                   </VBox>
-                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="5">
                      <children>
                         <Text fill="#e0ff4f" text="Fecha de nacimiento" />
                         <DatePicker />
@@ -74,6 +76,13 @@
                         </HBox>
                      </children>
                   </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+                     <children>
+                        <Text fill="#e0ff4f" text="Correo" />
+                        <TextField promptText="Correo" />
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #E0ff4F; -fx-background-radius: 15; -fx-text-fill: #002529;" text="Guardar" textFill="#002529" GridPane.rowIndex="6" />
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

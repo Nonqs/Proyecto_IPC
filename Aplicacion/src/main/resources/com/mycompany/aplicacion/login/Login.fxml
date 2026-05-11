@@ -9,48 +9,47 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<VBox alignment="TOP_CENTER" prefHeight="844.0" prefWidth="390.0" spacing="12.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.aplicacion.login.LoginController">
+<VBox alignment="CENTER" prefHeight="317.0" prefWidth="390.0" spacing="16.0" style="-fx-background-color: #E0ff4F;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.aplicacion.editUser.EditUserController">
    <children>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="342.0">
+      <Label prefHeight="35.0" prefWidth="150.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Iniciar sesión" textAlignment="CENTER" textFill="#00272b">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="373.0" prefWidth="342.0" style="-fx-background-color: #00272B; -fx-background-radius: 15;">
          <children>
-            <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Login" />
+            <GridPane prefHeight="377.0" prefWidth="342.0" VBox.vgrow="ALWAYS">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Text fill="#e0ff4f" text="Nickname" />
+                        <TextField promptText="Nickname" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                     <children>
+                        <Text fill="#e0ff4f" text="Contraseña" />
+                        <PasswordField promptText="Contraseña" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </GridPane>
          </children>
       </VBox>
-      <GridPane VBox.vgrow="ALWAYS">
-        <columnConstraints>
-          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="105.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="105.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="463.0" minHeight="10.0" prefHeight="370.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <VBox alignment="CENTER" prefHeight="184.0" prefWidth="342.0">
-               <children>
-                  <Label text="Usuario" />
-                  <TextField maxWidth="220.0" promptText="Userio" />
-               </children>
-            </VBox>
-            <VBox alignment="TOP_CENTER" prefHeight="151.0" prefWidth="342.0" GridPane.rowIndex="1">
-               <children>
-                  <Label text="Contraseña" />
-                  <PasswordField maxWidth="220.0" promptText="Contraseña" />
-               </children>
-            </VBox>
-            <VBox alignment="TOP_CENTER" prefHeight="443.0" prefWidth="342.0" GridPane.rowIndex="2">
-               <children>
-                  <Button onAction="#goToHome" prefHeight="25.0" prefWidth="228.0" text="Entrar">
-                     <VBox.margin>
-                        <Insets bottom="40.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button onAction="#goToRegister" prefHeight="25.0" prefWidth="228.0" text="Ir a registro" />
-               </children>
-            </VBox>
-         </children>
-      </GridPane>
+      <Button onAction="#goToHome" prefHeight="26.0" prefWidth="344.0" style="-fx-background-color: #00272B; -fx-background-radius: 15;" text="Iniciar sesión" textFill="#e0ff4f" />
    </children>
    <padding>
       <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
