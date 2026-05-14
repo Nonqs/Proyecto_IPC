@@ -35,20 +35,24 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import javafx.scene.web.WebView?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="844.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="844.0" prefWidth="390.0" style="-fx-background-color: #E0ff4F #E0ff4F;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <padding>
       <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
    </padding>
    <children>
-      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+      <HBox prefHeight="58.0" prefWidth="330.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nueva actividad">
                <font>
@@ -57,18 +61,197 @@
             </Text>
          </children>
       </HBox>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <Label text="Sube un archivo GPX para analizar tu recorrido..." />
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="641.0" prefWidth="330.0" style="-fx-background-radius: 20; -fx-background-color: #00272B;">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
          <children>
-            <WebView layoutX="65.0" layoutY="4.0" prefHeight="200.0" prefWidth="200.0" />
-            <Button layoutX="127.0" layoutY="89.0" mnemonicParsing="false" text="Cargar GPX" />
+            <StackPane alignment="TOP_CENTER" prefHeight="142.0" prefWidth="299.0" style="-fx-border-style: dashed; -fx-border-color: gray; -fx-border-radius: 15;">
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrastra tu archivo GPX o pulsa aquí" textAlignment="CENTER" wrappingWidth="129.0494842529297" StackPane.alignment="CENTER" />
+                  <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #E0ff4F;" text="Seleccionar GPX" StackPane.alignment="BOTTOM_CENTER" />
+                  <ImageView fitHeight="43.0" fitWidth="38.0" opacity="0.84" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../../pngwing.com.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <Label text="Vista previa del mapa" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="15.0" right="10.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="330.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <AnchorPane prefHeight="120.0" prefWidth="275.0" style="-fx-background-color: #3254543f; -fx-background-radius: 8;">
+                     <children>
+                        <Text fill="WHITE" layoutX="72.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carga un archivo GPX para ver el mapa aquí" textAlignment="CENTER" wrappingWidth="151.03778076171875" />
+                        <VBox layoutX="255.0" layoutY="8.0" prefHeight="142.0" prefWidth="38.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="+" />
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="-">
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" style="-fx-background-radius: 15; -fx-background-color: #E0ff4F;" text="Añadir anotaciones...">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Label text="Estadísticas de la carrera" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <GridPane alignment="CENTER" hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="146.0" prefWidth="310.0" vgap="5.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <VBox.margin>
+                  <Insets bottom="30.0" left="10.0" right="10.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #3254543f; -fx-background-radius: 15;">
+                     <children>
+                        <Label text="Distancia" textFill="WHITE" />
+                        <Text fill="#e0ff4f" strokeType="OUTSIDE" strokeWidth="0.0" text="-- km">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #3254543f; -fx-background-radius: 15;" GridPane.columnIndex="1">
+                     <children>
+                        <Label text="Duración" textFill="WHITE" />
+                        <Text fill="#e0ff4f" strokeType="OUTSIDE" strokeWidth="0.0" text="--:--:--">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #3254543f; -fx-background-radius: 15;" GridPane.columnIndex="2">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="81.0" text="Velovidad media" textFill="WHITE" />
+                        <Text fill="#e0ff4f" strokeType="OUTSIDE" strokeWidth="0.0" text="-- km/h">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #3254543f; -fx-background-radius: 15;" GridPane.columnIndex="3">
+                     <children>
+                        <Label text="Ritmo medio" textFill="WHITE" />
+                        <Text fill="#e0ff4f" strokeType="OUTSIDE" strokeWidth="0.0" text="--  min/km">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #3254543f; -fx-background-radius: 15;">
+                           <children>
+                              <Label text="Altitud máxima" textFill="WHITE" />
+                              <Text fill="#e0ff4f" strokeType="OUTSIDE" strokeWidth="0.0" text="-- m">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #3254543f; -fx-background-radius: 15;">
+                           <children>
+                              <Label text="Desnivel -" textFill="WHITE" />
+                              <Text fill="#e0ff4f" strokeType="OUTSIDE" strokeWidth="0.0" text="--m">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #3254543f; -fx-background-radius: 15;" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Desnivel +" textFill="WHITE" />
+                        <Text fill="#e0ff4f" strokeType="OUTSIDE" strokeWidth="0.0" text="-- m">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #3254543f; -fx-background-radius: 15;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Altitud mínima" textFill="WHITE" />
+                        <Text fill="#e0ff4f" strokeType="OUTSIDE" strokeWidth="0.0" text="-- m">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
          </children>
-      </AnchorPane>
-      <Label text="Label" />
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="341.0" style="-fx-background-color: #00272B; -fx-background-radius: 20;">
          <children>
-            <Button mnemonicParsing="false" text="Descartar" />
-            <Button mnemonicParsing="false" text="Publicar" />
+            <Button mnemonicParsing="false" text="Cancelar" />
+            <Button mnemonicParsing="false" style="-fx-background-color: #E0ff4F #E0ff4F;" text="Guardar actividad">
+               <HBox.margin>
+                  <Insets left="15.0" right="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
       </HBox>
    </children>
 </VBox>
