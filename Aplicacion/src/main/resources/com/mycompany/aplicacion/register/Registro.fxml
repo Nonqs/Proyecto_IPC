@@ -40,91 +40,222 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="StackPane_Registro" maxHeight="430.0" maxWidth="320.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="320.0" style="-fx-background-color: #00272B; -fx-background-radius: 20; -fx-background-insets: 0; -fx-border-insets: 0;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.aplicacion.register.RegistroController">
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #e0ff4f;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="320.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="363.0" prefWidth="320.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: transparent; -fx-background-insets: 0; -fx-border-insets: 0;" vgap="10.0" StackPane.alignment="BOTTOM_CENTER">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints maxHeight="125.33331298828125" minHeight="10.0" prefHeight="59.66667175292969" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="187.33331298828125" minHeight="8.777758280436217" prefHeight="56.66667175292969" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="227.00001525878906" minHeight="5.3333282470703125" prefHeight="59.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="157.33331298828125" minHeight="3.777796427408873" prefHeight="57.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="157.33331298828125" minHeight="6.333353678385436" prefHeight="46.666656494140625" vgrow="SOMETIMES" />
-         </rowConstraints>
+      <StackPane fx:id="StackPane_Registro" maxHeight="430.0" maxWidth="320.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="700.0" style="-fx-background-color: #00272B; -fx-background-radius: 20; -fx-background-insets: 0; -fx-border-insets: 0;">
          <children>
-            <TextField maxWidth="150.0" promptText="Nickname" GridPane.columnSpan="2">
-               <GridPane.margin>
-                  <Insets top="3.0" />
-               </GridPane.margin></TextField>
-            <DatePicker GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets top="3.0" />
-               </GridPane.margin></DatePicker>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Debe contener entre 8-12 caracteres" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+            <GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="320.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="363.0" prefWidth="700.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: transparent; -fx-background-insets: 0; -fx-border-insets: 0;" vgap="8.0" StackPane.alignment="BOTTOM_CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.33331298828125" minWidth="10.0" prefWidth="323.3333333333333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="317.3333333333333" minWidth="10.0" prefWidth="317.3333333333333" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="125.33331298828125" minHeight="10.0" prefHeight="74.33332824707031" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="187.33331298828125" minHeight="8.777758280436217" prefHeight="74.77780151367188" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="227.00001525878906" minHeight="5.3333282470703125" prefHeight="56.44444783528647" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="157.33331298828125" minHeight="3.777796427408873" prefHeight="57.11111450195315" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="157.33331298828125" minHeight="6.333353678385436" prefHeight="25.55555216471356" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
-                  <Button alignment="TOP_RIGHT" mnemonicParsing="false" text="Cancelar" textFill="#00272b" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #e0ff4f;" text="Registrarme" textFill="#00272b">
-                     <HBox.margin>
-                        <Insets left="15.0" />
-                     </HBox.margin>
+                  <Text fx:id="error_User" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Este nombre de usuario ya está en uso" GridPane.valignment="BOTTOM">
                      <font>
-                        <Font name="System Bold" size="12.0" />
+                        <Font size="10.0" />
                      </font>
-                     <effect>
-                        <InnerShadow />
-                     </effect>
+                     <GridPane.margin>
+                        <Insets bottom="18.0" left="7.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <TextField fx:id="introduce_User" maxWidth="150.0" promptText="Nickname" GridPane.columnSpan="2">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="7.0" top="3.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <DatePicker fx:id="introduce_BirthDate" promptText="Fecha de nacimiento" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="13.0" left="7.0" top="3.0" />
+                     </GridPane.margin>
+                  </DatePicker>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                     <children>
+                        <Button alignment="TOP_RIGHT" mnemonicParsing="false" text="Cancelar" textFill="#00272b" />
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #e0ff4f;" text="Registrarme" textFill="#00272b">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                  </HBox>
+                  <Label text="Nombre de usuario: *" textFill="#e0ff4f" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="7.0" />
+                     </GridPane.margin></Label>
+                  <Label text="Contraseña: *" textFill="#e0ff4f" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="7.0" />
+                     </GridPane.margin></Label>
+                  <Label text="Corre electrónico: *" textFill="#e0ff4f" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="7.0" />
+                     </GridPane.margin></Label>
+                  <Label text="Fecha de nacimiento: *" textFill="#e0ff4f" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="7.0" />
+                     </GridPane.margin></Label>
+                  <PasswordField fx:id="introduce_Password" maxWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" promptText="Contraseña" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="18.0" left="7.0" top="3.0" />
+                     </GridPane.margin></PasswordField>
+                  <TextField fx:id="introduce_Email" maxWidth="-Infinity" prefWidth="170.0" promptText="usuario@dominio" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="7.0" top="3.0" />
+                     </GridPane.margin></TextField>
+                  <Text fx:id="error_Password" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Debe contener entre 8-20 caracteres" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="7.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Text fx:id="error_Email" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="El formato es incorrecto" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="7.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="14.0" style="-fx-background-color: transparent;" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                     <graphic>
+                        <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@boton-de-informacion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <GridPane.margin>
+                        <Insets top="2.0" />
+                     </GridPane.margin>
                   </Button>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                     <children>
+                        <Avatar>
+                           <VBox.margin>
+                              <Insets left="50.0" top="20.0" />
+                           </VBox.margin>
+                        </Avatar>
+                        <Text fill="#e0ff4f" strokeType="OUTSIDE" strokeWidth="0.0" text="Elegir avatar...">
+                           <VBox.margin>
+                              <Insets left="50.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" style="-fx-background-color: transparent;" GridPane.valignment="BOTTOM">
+                     <graphic>
+                        <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@boton-de-informacion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="La edad especificada no cumple con los requisitos mínimos para registrarse" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="7.0" />
+                     </GridPane.margin>
+                  </Text>
                </children>
-               <GridPane.margin>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </GridPane.margin>
+               <padding>
+                  <Insets bottom="30.0" left="20.0" right="30.0" top="15.0" />
+               </padding>
+            </GridPane>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="410.0" prefWidth="222.0">
+                     <children>
+                        <VBox fx:id="informacion_User" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="71.0" prefWidth="139.0" style="-fx-background-color: white; -fx-background-radius: 15;" visible="false">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Entre 6 - 15 caracteres Solo letras, dígitos, guiones o subguiones" wrappingWidth="122.27732849121094">
+                                 <VBox.margin>
+                                    <Insets bottom="9.0" left="9.0" right="9.0" top="9.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="43.0" top="120.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </VBox>
+                        <VBox fx:id="informacion_Password" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="92.0" prefWidth="155.0" style="-fx-background-color: white; -fx-background-radius: 15;" visible="false">
+                           <VBox.margin>
+                              <Insets left="40.0" top="12.0" />
+                           </VBox.margin>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Al menoos una mayúscula, una minúsculan, un dígito y un símbolo (!@#$%&amp;*()-+)" wrappingWidth="141.5931396484375">
+                                 <VBox.margin>
+                                    <Insets bottom="9.0" left="9.0" right="9.0" top="9.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children></HBox>
+            <HBox maxHeight="-Infinity" prefHeight="50.0" prefWidth="320.0" style="-fx-background-color: #e0ff4f;" StackPane.alignment="TOP_CENTER">
+               <effect>
+                  <InnerShadow />
+               </effect>
             </HBox>
-            <Label text="Nombre de usuario: *" textFill="#e0ff4f" GridPane.valignment="TOP" />
-            <Label text="Contraseña: *" textFill="#e0ff4f" GridPane.rowIndex="1" GridPane.valignment="TOP" />
-            <Label text="Corre electrónico: *" textFill="#e0ff4f" GridPane.rowIndex="2" GridPane.valignment="TOP" />
-            <Label text="Fecha de nacimiento: *" textFill="#e0ff4f" GridPane.rowIndex="3" GridPane.valignment="TOP" />
-            <Avatar GridPane.columnIndex="1">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="50.0" />
-               </GridPane.margin>
-            </Avatar>
-            <Text fill="#e0ff4f" strokeType="OUTSIDE" strokeWidth="0.0" text="Elegir avatar..." GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
-               <GridPane.margin>
-                  <Insets left="20.0" top="5.0" />
-               </GridPane.margin>
+            <Text fill="#00272b" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrarse" StackPane.alignment="TOP_CENTER">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
             </Text>
-            <PasswordField maxWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" promptText="Contraseña" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-            <TextField maxWidth="-Infinity" prefWidth="170.0" promptText="Correo electrónico" GridPane.columnSpan="2" GridPane.rowIndex="2" />
          </children>
          <padding>
-            <Insets bottom="30.0" left="30.0" right="30.0" top="15.0" />
+            <Insets top="20.0" />
          </padding>
-      </GridPane>
-      <HBox prefHeight="100.0" prefWidth="200.0" />
-      <HBox maxHeight="-Infinity" prefHeight="50.0" prefWidth="320.0" style="-fx-background-color: #e0ff4f;" StackPane.alignment="TOP_CENTER">
-         <effect>
-            <InnerShadow />
-         </effect>
-      </HBox>
-      <Text fill="#00272b" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrarse" StackPane.alignment="TOP_CENTER">
-         <font>
-            <Font name="Arial" size="36.0" />
-         </font>
-      </Text>
+      </StackPane>
    </children>
-   <padding>
-      <Insets top="20.0" />
-   </padding>
-</StackPane>
+</HBox>
